@@ -1,0 +1,204 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\f904d50662220978cca9709ce26c47c1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3d116057448d6cda4063d04ce6b9b27c\AndroidManifest.xml:2:1-11:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\af4212f517b2676ba38d1b29f66daf62\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\996b8da2b92413bc44cfda75dabab337\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7123cb38993a8205b0a568755c262519\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\406f34e3af2d819f3eb10cded6c042da\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\9ddd75837c71a609baf9d2a5a17f36d5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\9c5e08e5fd213508be4df90dfb8dc511\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\7f638c4db2c244aa6c569e5d6be84375\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\8d15762bcb0ca6b474c3c647e392ddb2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\3d9bb812ef50a5e8477f5a0048dbbef5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\13ae4e744d15eed9b34395a855c16278\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\e38222bc827def8f71be429330ac84d9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\c3e53a40bc5e4b1a2fb794cb8873b10c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\7a8fb4d956e35f8ddbbd6e8a82f31aab\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b2d803da43ff138601fbc9a7c823aeb9\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\d5339932e68a29a8d5d5dc922310473f\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\102b95e43deb26e66056db13830f1143\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.0.aar\81170baa1bd244edd73c119cef6983c7\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a57efad99154fb0ee1cdac1aac7e27a9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\88201269a7a8a09896ac5bfe46ceadc2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\77c4f6d209ba1f77f0e569e5f06be12b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\c8ff96909eb19eba5e1334f9bc9cc87d\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\9717665470bafcf8e9273eccd79127fd\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\abaeab5a98b029fb7b1aae926406e863\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\36b030078d560d84e80ff24890dbec73\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\6f4676b6d33fae1187924e4eff8a1f0e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\05868db19dc182a4b522911da8966c54\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+	package
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:19:5-47
+		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:11-69
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:21:5-65
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:21:22-62
+uses-feature#android.hardware.camera
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:23:5-60
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:23:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:24:5-70
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:24:19-67
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:26:5-81
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:26:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:27:5-79
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:27:22-77
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:28:5-67
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:28:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:29:5-79
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:29:22-76
+application
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:30:5-46:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3d116057448d6cda4063d04ce6b9b27c\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3d116057448d6cda4063d04ce6b9b27c\AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:7:5-12:19
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b2d803da43ff138601fbc9a7c823aeb9\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b2d803da43ff138601fbc9a7c823aeb9\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\d5339932e68a29a8d5d5dc922310473f\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\d5339932e68a29a8d5d5dc922310473f\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b2d803da43ff138601fbc9a7c823aeb9\AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:31:9-41
+	android:icon
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:32:9-45
+	android:allowBackup
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:30:18-44
+	android:theme
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:33:9-45
+activity#com.example.android.camera2basic.CameraActivity
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:35:9-41:20
+	android:label
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:36:19-51
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:35:19-49
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:37:13-40:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:38:17-69
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:38:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:39:17-77
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:39:27-74
+activity#yokohama.osm.activity.UploadActivity
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:43:9-72
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:43:19-70
+activity#yokohama.osm.activity.ListImagesActivity
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:44:9-76
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:44:19-74
+uses-sdk
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\f904d50662220978cca9709ce26c47c1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\f904d50662220978cca9709ce26c47c1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3d116057448d6cda4063d04ce6b9b27c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3d116057448d6cda4063d04ce6b9b27c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\af4212f517b2676ba38d1b29f66daf62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\af4212f517b2676ba38d1b29f66daf62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\996b8da2b92413bc44cfda75dabab337\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\996b8da2b92413bc44cfda75dabab337\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7123cb38993a8205b0a568755c262519\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7123cb38993a8205b0a568755c262519\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\406f34e3af2d819f3eb10cded6c042da\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\406f34e3af2d819f3eb10cded6c042da\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\9ddd75837c71a609baf9d2a5a17f36d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\9ddd75837c71a609baf9d2a5a17f36d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\9c5e08e5fd213508be4df90dfb8dc511\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\9c5e08e5fd213508be4df90dfb8dc511\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\7f638c4db2c244aa6c569e5d6be84375\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\7f638c4db2c244aa6c569e5d6be84375\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\8d15762bcb0ca6b474c3c647e392ddb2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\8d15762bcb0ca6b474c3c647e392ddb2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\3d9bb812ef50a5e8477f5a0048dbbef5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\3d9bb812ef50a5e8477f5a0048dbbef5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\13ae4e744d15eed9b34395a855c16278\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\13ae4e744d15eed9b34395a855c16278\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\e38222bc827def8f71be429330ac84d9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\e38222bc827def8f71be429330ac84d9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\c3e53a40bc5e4b1a2fb794cb8873b10c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\c3e53a40bc5e4b1a2fb794cb8873b10c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\7a8fb4d956e35f8ddbbd6e8a82f31aab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\7a8fb4d956e35f8ddbbd6e8a82f31aab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b2d803da43ff138601fbc9a7c823aeb9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b2d803da43ff138601fbc9a7c823aeb9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\d5339932e68a29a8d5d5dc922310473f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\d5339932e68a29a8d5d5dc922310473f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\102b95e43deb26e66056db13830f1143\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\102b95e43deb26e66056db13830f1143\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.0.aar\81170baa1bd244edd73c119cef6983c7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.0.aar\81170baa1bd244edd73c119cef6983c7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a57efad99154fb0ee1cdac1aac7e27a9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a57efad99154fb0ee1cdac1aac7e27a9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\88201269a7a8a09896ac5bfe46ceadc2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\88201269a7a8a09896ac5bfe46ceadc2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\77c4f6d209ba1f77f0e569e5f06be12b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\77c4f6d209ba1f77f0e569e5f06be12b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\c8ff96909eb19eba5e1334f9bc9cc87d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\c8ff96909eb19eba5e1334f9bc9cc87d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\9717665470bafcf8e9273eccd79127fd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\9717665470bafcf8e9273eccd79127fd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\abaeab5a98b029fb7b1aae926406e863\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\abaeab5a98b029fb7b1aae926406e863\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\36b030078d560d84e80ff24890dbec73\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\36b030078d560d84e80ff24890dbec73\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\6f4676b6d33fae1187924e4eff8a1f0e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\6f4676b6d33fae1187924e4eff8a1f0e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\05868db19dc182a4b522911da8966c54\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\05868db19dc182a4b522911da8966c54\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:9:13-64
