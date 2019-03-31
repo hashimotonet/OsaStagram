@@ -174,14 +174,15 @@ public class GridAdapter extends BaseAdapter {
     }
 
     /**
-     * オーバーライドスタブメソッド
+     * imageListに引数のインデックスを指定し、
+     * 要素である画像イメージURLを返します。
      *
      * @param position
      * @return
      */
     @Override
-    public Object getItem(int position) {
-        return null;
+    public String getItem(int position) {
+        return imageList.get(position);
     }
 
     /**

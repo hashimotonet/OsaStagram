@@ -261,7 +261,11 @@ public class Camera2BasicFragment extends Fragment
         @Override
         public void onImageAvailable(ImageReader reader) {
             Log.i("IMPORTANT","mFile = " + mFile);
-            mBackgroundHandler.post(new ImageSaver(reader.acquireNextImage(), mFile));
+            Image raw = reader.acquireNextImage();
+//            Image raw = reader.acquireLatestImage();
+            Log.w(TAG, "raw = " + raw);
+            mBackgroundHandler.post(new ImageSaver(raw, mFile));
+            //raw.close();
             //reader.close();
         }
 
@@ -744,6 +748,7 @@ public class Camera2BasicFragment extends Fragment
                                 mPreviewRequest = mPreviewRequestBuilder.build();
                                 mCaptureSession.setRepeatingRequest(mPreviewRequest,
                                         mCaptureCallback, mBackgroundHandler);
+
                             } catch (CameraAccessException e) {
                                 e.printStackTrace();
                             }
@@ -876,7 +881,7 @@ public class Camera2BasicFragment extends Fragment
                 public void onCaptureCompleted(@NonNull CameraCaptureSession session,
                                                @NonNull CaptureRequest request,
                                                @NonNull TotalCaptureResult result) {
-                    Log.w(TAG,"mFile = " + mFile.toString());
+                    Log.w(TAG,"Saved: " + mFile.toString());
                     showToast("Saved: " + mFile);
                     unlockFocus();
 
@@ -1023,7 +1028,7 @@ public class Camera2BasicFragment extends Fragment
             buffer.get(bytes);
             FileOutputStream output = null;
 
-            Log.w("IMPORTANT","_mFile = " + _mFile);
+            Log.w("IMPORTANT","ImageSaver#run() : _mFile = " + _mFile);
 
             try {
                 output = new FileOutputStream(_mFile);

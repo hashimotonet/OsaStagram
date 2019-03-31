@@ -1,10 +1,13 @@
 package yokohama.osm.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -47,7 +50,7 @@ public class ListImagesActivity extends AppCompatActivity {
             "http://52.68.126.14:8080/PhotoGallery/hashimoto/14.jpg"
             };
 
-
+    private String photo;
 
     public ListImagesActivity() {
         super();
@@ -263,14 +266,35 @@ public class ListImagesActivity extends AppCompatActivity {
             // gridViewにadapterをセット
             gridview.setAdapter(adapter);
 
-            // 一覧画面取得完了を出力。
-            if (success.startsWith("success")) {
-                message = "一覧取得が完了しました！";
-            } else {
-                message = "一覧取得が失敗しました。";
-            }
+            //リスト項目が選択された時のイベントを追加
+            gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    photo = url[position];
+                    String msg = position + "番目のアイテムがクリックされました";
+                    //msg += msg + " \n " + photo;
+                    //Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                    //
+                    // インテント、URLを引数に、一画面イメージの描画アクティビティを表示する。
+                    //
+                    Intent intent = new Intent(ListImagesActivity.this, SpreadImageActivity.class);
+                    loadSpreadImageActivity(intent, photo);
+                }
+            });
+//            // 一覧画面取得完了を出力。
+//            if (success.startsWith("success")) {
+//                message = "一覧取得が完了しました！";
+//            } else {
+//                message = "一覧取得が失敗しました。";
+//            }
+//
+//            Toast.makeText(getBaseContext(), message, Toast.LENGTH_LONG).show();
 
-            Toast.makeText(getBaseContext(), message, Toast.LENGTH_LONG).show();
+        }
+
+        private void loadSpreadImageActivity(Intent intent, String url) {
+            intent.putExtra("url", url);
+            startActivity(intent);
         }
 
         public String convertInputStreamToString(InputStream is) throws IOException {

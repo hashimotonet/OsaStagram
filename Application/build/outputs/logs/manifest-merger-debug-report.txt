@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
-INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
-INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
-INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-52:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-52:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-52:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-52:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\f904d50662220978cca9709ce26c47c1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3d116057448d6cda4063d04ce6b9b27c\AndroidManifest.xml:2:1-11:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:2:1-14:12
@@ -33,20 +33,20 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\user\.gradle\caches
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\36b030078d560d84e80ff24890dbec73\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\6f4676b6d33fae1187924e4eff8a1f0e\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\05868db19dc182a4b522911da8966c54\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
-INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
-INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-52:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-52:12
+INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-52:12
 	package
 		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:19:5-47
 		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-52:12
 		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-48:12
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:1-52:12
 		INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:18:11-69
@@ -79,7 +79,7 @@ ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\s
 	android:name
 		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:29:22-76
 application
-ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:30:5-46:19
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:30:5-50:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3d116057448d6cda4063d04ce6b9b27c\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3d116057448d6cda4063d04ce6b9b27c\AndroidManifest.xml:9:5-20
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\bfaac6154f9d5d9715a0563a8b1e280b\AndroidManifest.xml:7:5-12:19
@@ -91,37 +91,45 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.grad
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b2d803da43ff138601fbc9a7c823aeb9\AndroidManifest.xml:22:18-91
 	android:label
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:31:9-41
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:34:9-41
+	android:hardwareAccelerated
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:32:9-43
+	android:largeHeap
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:33:9-33
 	android:icon
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:32:9-45
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:35:9-45
 	android:allowBackup
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:30:18-44
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:31:9-35
 	android:theme
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:33:9-45
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:36:9-45
 activity#com.example.android.camera2basic.CameraActivity
-ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:35:9-41:20
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:38:9-44:20
 	android:label
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:36:19-51
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:39:19-51
 	android:name
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:35:19-49
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:38:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:37:13-40:29
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:40:13-43:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:38:17-69
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:41:17-69
 	android:name
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:38:25-66
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:41:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:39:17-77
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:42:17-77
 	android:name
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:39:27-74
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:42:27-74
 activity#yokohama.osm.activity.UploadActivity
-ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:43:9-72
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:46:9-72
 	android:name
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:43:19-70
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:46:19-70
 activity#yokohama.osm.activity.ListImagesActivity
-ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:44:9-76
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:47:9-76
 	android:name
-		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:44:19-74
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:47:19-74
+activity#yokohama.osm.activity.SpreadImageActivity
+ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:48:9-77
+	android:name
+		ADDED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml:48:19-75
 uses-sdk
 INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\user\Documents\PhotoGallery\WINGS\Camera2Basic\Application\src\main\AndroidManifest.xml

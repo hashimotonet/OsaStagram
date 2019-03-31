@@ -107,7 +107,7 @@ public class MatrixUtil {
         Bitmap originalPicture = BitmapFactory.decodeFile(file.getAbsolutePath());
 //        Bitmap originalPicture = BitmapFactory.decodeFile(file.getPath());
 
-        Log.d("IMPORTANT","originalPicture = " + originalPicture.toString());
+        Log.w("IMPORTANT","originalPicture = " + originalPicture);
 
         //if (originalPicture == null ) return null;
 
