@@ -77,36 +77,6 @@ public class ListImagesActivity extends AppCompatActivity {
         }
     }
 
-//    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
-//
-//        ImageView bmImage;
-//
-//        public DownloadImageTask(ImageView bmImage) {
-//            this.bmImage = bmImage;
-//        }
-//
-//        protected Bitmap doInBackground(String... urls) {
-//            String urlDisplay = urls[0];
-//            Bitmap mIcon11 = null;
-//            try {
-//                InputStream in = new java.net.URL(urlDisplay).openStream();
-//                mIcon11 = BitmapFactory.decodeStream(in);
-//                Log.i("IMPORTANT", "(mIcon11 != null) : " + (mIcon11 != null));
-//            } catch (Exception e) {
-//                Log.e("Error", e.getMessage());
-//                e.printStackTrace();
-//            }
-//            return mIcon11;
-//        }
-//
-//        protected void onPostExecute(Bitmap result) {
-//            bmImage.setImageBitmap(result);
-//            Log.i("IMPORTANT", "(bmImage != null) : " + (bmImage != null));
-//            Log.i("IMPORTANT", "(result != null)  : " + (result != null));
-//            Log.i("IMPORTANT", "DownloadImageTask#onPostExecute() finished.");
-//        }
-//    }
-
     /**
      * インターネット接続インナークラス
      */
