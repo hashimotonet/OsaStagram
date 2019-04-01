@@ -10,7 +10,10 @@ import android.widget.ImageView;
 
 import com.example.android.camera2basic.R;
 
-public class SpreadImageActivity extends Activity {
+import yokohama.osm.activity.base.OsBaseActivity;
+
+public class SpreadImageActivity extends OsBaseActivity {
+
     public SpreadImageActivity() {
         super();
     }
@@ -24,13 +27,15 @@ public class SpreadImageActivity extends Activity {
         Intent intent = getIntent();
         String url = intent.getStringExtra("url");
         Uri uri = getImageURI(url);
+        ImageView ivImage = findViewById(R.id.spreadImageView);
 
-        @SuppressLint("ResourceType") ImageView ivImage = findViewById(R.id.spreadImageView);
-        ivImage.setImageURI(uri);
+        DownloadImageTask imageTask = new DownloadImageTask(ivImage);
+        imageTask.execute(url);
     }
 
     private Uri getImageURI(String url) {
         Uri uri = Uri.parse(url);
         return uri;
     }
+
 }
