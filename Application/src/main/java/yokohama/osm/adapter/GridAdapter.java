@@ -11,12 +11,13 @@ import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-import com.example.android.camera2basic.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import yokohama.osm.R;
 
 import static android.content.Context.WINDOW_SERVICE;
 
@@ -136,7 +137,7 @@ public class GridAdapter extends BaseAdapter {
         // イメージビューを取得する
         ImageView img = view.findViewById(R.id.image_view);
         // イメージビューにスケールタイプを設定する
-        img.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        img.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
         // Picassoフレームワークによる画像のロードとリサイズと描画の処理
         Picasso.get()

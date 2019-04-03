@@ -11,7 +11,6 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.example.android.camera2basic.R;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -24,6 +23,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import yokohama.osm.R;
 import yokohama.osm.adapter.GridAdapter;
 import yokohama.osm.util.BaseUtil;
 

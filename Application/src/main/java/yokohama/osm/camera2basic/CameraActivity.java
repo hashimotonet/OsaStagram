@@ -14,13 +14,15 @@
  * limitations under the License.
  */
 
-package com.example.android.camera2basic;
+package yokohama.osm.camera2basic;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
+
+import yokohama.osm.R;
 
 public class CameraActivity extends AppCompatActivity {
 

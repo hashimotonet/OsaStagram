@@ -8,8 +8,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.example.android.camera2basic.R;
 
+import yokohama.osm.R;
 import yokohama.osm.activity.base.OsBaseActivity;
 
 public class SpreadImageActivity extends OsBaseActivity {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.camera2basic;
+package yokohama.osm.camera2basic;
 
 import android.Manifest;
 import android.app.Activity;
@@ -76,6 +76,7 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+import yokohama.osm.R;
 import yokohama.osm.activity.UploadActivity;
 
 import static yokohama.osm.util.ImageUtil.file2Uri;

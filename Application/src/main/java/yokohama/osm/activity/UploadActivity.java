@@ -17,7 +17,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.android.camera2basic.R;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -34,6 +33,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
+
+import yokohama.osm.R;
 
 import static yokohama.osm.util.ImageUtil.convertImage2Base64;
 import static yokohama.osm.util.ImageUtil.uri2File;
