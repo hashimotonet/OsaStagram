@@ -93,9 +93,8 @@ public class UploadActivity extends Activity
         String extra = intent.getStringExtra("Uri");
         Log.i("IMPORTANT", "extra = " + extra);
 
-        Uri uri = Uri.parse(extra);
-        this._uri = uri;
-        File file = uri2File(uri);
+        _uri = Uri.parse(extra);
+        File file = uri2File(_uri);
         if (file != null) {
             Log.i("IMPORTANT", "file.exists() = " + file.exists());
         } else {
@@ -119,13 +118,26 @@ public class UploadActivity extends Activity
             e.printStackTrace();
         }
 
-        Log.i("IMPORTANT","uri = " + uri.toString());
+        Log.i("IMPORTANT","uri = " + _uri.toString());
 
     }
 
+    /**
+     * アップロード処理完了後は、画像は内部ストレージに残さず
+     * クラウドネットワークから取得するので、内部ストレージに
+     * 保存したファイルは削除処理を行う。
+     */
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        super.onActivityResult(requestCode, resultCode, intent);
+    public void onDestroy() {
+        if (_uri != null) {
+            File file = new File(_uri.getPath());
+            if (file != null) {
+                if (file.exists()) {
+                    file.delete();
+                }
+            }
+        }
+        super.onDestroy();
     }
 
     /**
