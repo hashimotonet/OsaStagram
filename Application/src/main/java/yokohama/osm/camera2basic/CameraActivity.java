@@ -26,6 +26,8 @@ import yokohama.osm.R;
 
 public class CameraActivity extends AppCompatActivity {
 
+    private static CameraActivity instance = null;
+
     private static final String TAG = "Camera2BasicFragment";
 
     @Override
@@ -35,12 +37,19 @@ public class CameraActivity extends AppCompatActivity {
 
         Log.i(TAG,"onCreate()");
 
+        instance = this;
+
         if (null == savedInstanceState) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container, Camera2BasicFragment.newInstance())
                     .commit();
         }
     }
+
+    public static CameraActivity getInstance() {
+        return instance;
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         Log.i(TAG, "CameraActivity#onActivityResult() called.");

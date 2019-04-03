@@ -466,12 +466,13 @@ public class Camera2BasicFragment extends Fragment
         super.onActivityCreated(savedInstanceState);
         String fileName = String.valueOf(System.currentTimeMillis());
 //        try {
-            mFile = new File(getActivity().getExternalFilesDir(null), "pic.jpg");
+            mFile = new File(CameraActivity.getInstance().getFilesDir(), "pic.jpg");
+            //mFile = new File(getActivity().getExternalFilesDir(null), "pic.jpg");
             //mFile.createNewFile();
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-        Log.i("IMPORTANT", "mFile = " + mFile.getAbsolutePath());
+        Log.w("IMPORTANT", "mFile = " + mFile.getAbsolutePath());
     }
 
     @Override
@@ -706,6 +707,16 @@ public class Camera2BasicFragment extends Fragment
         }
     }
 
+    private CameraActivity activity = null;
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        if (activity instanceof CameraActivity) {
+            this.activity = (CameraActivity)activity;
+        }
+    }
+
     /**
      * Creates a new {@link CameraCaptureSession} for camera preview.
      */
@@ -908,7 +919,7 @@ public class Camera2BasicFragment extends Fragment
                     //
                     // 画像描画アクティビティ表示
                     //
-                    Intent intent = new Intent(getActivity(), UploadActivity.class);
+                    Intent intent = new Intent(activity, UploadActivity.class);
 
                     Log.i("IMPORTANT","intent = " + intent);
 
@@ -1126,6 +1137,21 @@ public class Camera2BasicFragment extends Fragment
                             })
                     .create();
         }
+    }
+
+    /**
+     * fragment終了処理。
+     * カメラで撮影した画像イメージのファイルを
+     * 削除する。
+     */
+    @Override
+    public void onDetach() {
+        if (mFile != null) {
+            if (mFile.exists()) {
+//                mFile.delete();
+            }
+        }
+        super.onDetach();
     }
 
 }
