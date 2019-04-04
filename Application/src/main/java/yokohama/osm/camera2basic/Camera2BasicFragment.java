@@ -465,13 +465,14 @@ public class Camera2BasicFragment extends Fragment
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         String fileName = String.valueOf(System.currentTimeMillis());
-//        try {
+        try {
             mFile = new File(CameraActivity.getInstance().getFilesDir(), "pic.jpg");
+            mFile.createNewFile();
+            mFile.deleteOnExit();
             //mFile = new File(getActivity().getExternalFilesDir(null), "pic.jpg");
-            //mFile.createNewFile();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Log.w("IMPORTANT", "mFile = " + mFile.getAbsolutePath());
     }
 
@@ -914,7 +915,7 @@ public class Camera2BasicFragment extends Fragment
                     // mFileのURIを取得する。
                     Uri uri = file2Uri(mFile);
 
-                    Log.i("IMPORTANT","uri = " + uri.toString());
+                    Log.i("IMPORTANT","uri = " + uri);
 
                     //
                     // 画像描画アクティビティ表示
@@ -1058,8 +1059,7 @@ public class Camera2BasicFragment extends Fragment
                 }
             }
         }
-
-    }
+   }
 
     /**
      * Compares two {@code Size}s based on their areas.

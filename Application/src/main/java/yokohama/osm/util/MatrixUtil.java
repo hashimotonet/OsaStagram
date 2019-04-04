@@ -109,7 +109,7 @@ public class MatrixUtil {
 
         Log.w("IMPORTANT","originalPicture = " + originalPicture);
 
-        //if (originalPicture == null ) return null;
+        if (originalPicture == null ) return file;
 
         int height = originalPicture.getHeight();
         int width = originalPicture.getWidth();

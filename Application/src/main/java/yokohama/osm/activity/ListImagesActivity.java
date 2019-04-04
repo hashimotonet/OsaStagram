@@ -128,7 +128,11 @@ public class ListImagesActivity extends AppCompatActivity {
                 // ヘッダ設定
                 con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 
-                con.setUseCaches(false);
+                // キャッシュ有効
+                con.setUseCaches(true);
+
+                // 接続タイムアウト設定
+                con.setConnectTimeout(900); // 15分間
 
                 //接続。
                 con.connect();
