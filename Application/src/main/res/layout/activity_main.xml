@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#888"
-    android:padding="4dp"
     tools:context=".activity.ListImagesActivity">
 
     <GridView
@@ -14,8 +13,8 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:background="#888"
-        android:horizontalSpacing="2dp"
-        android:verticalSpacing="2dp"
+        android:horizontalSpacing="1dp"
+        android:verticalSpacing="1dp"
         android:numColumns="2"
         android:stretchMode="columnWidth" />
 

@@ -46,7 +46,8 @@
 
         <activity android:name="yokohama.osm.activity.UploadActivity"/>
         <activity android:name="yokohama.osm.activity.ListImagesActivity"/>
-        <activity android:name="yokohama.osm.activity.SpreadImageActivity"/>
+        <activity android:name="yokohama.osm.activity.SpreadImageActivity"
+                   android:configChanges="orientation|screenSize"/>
 
     </application>
 

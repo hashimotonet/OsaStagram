@@ -45,7 +45,7 @@ public class GridAdapter extends BaseAdapter {
     /**
      * 画像イメージのURLを持つリスト
      */
-    private List<String> imageList = new ArrayList<>();
+    private List<String> imageList = Collections.synchronizedList(new ArrayList<>());
 
     /**
      * 実画像の半分のサイズの幅
@@ -137,7 +137,7 @@ public class GridAdapter extends BaseAdapter {
         // イメージビューを取得する
         ImageView img = view.findViewById(R.id.image_view);
         // イメージビューにスケールタイプを設定する
-        img.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        //img.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
         // Picassoフレームワークによる画像のロードとリサイズと描画の処理
         Picasso.get()

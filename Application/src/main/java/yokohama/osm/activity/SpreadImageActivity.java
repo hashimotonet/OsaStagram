@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -21,6 +22,21 @@ public class SpreadImageActivity extends OsBaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.spread_image);
+
+        Intent intent = getIntent();
+        String url = intent.getStringExtra("url");
+        Uri uri = getImageURI(url);
+        ImageView ivImage = findViewById(R.id.spreadImageView);
+
+        DownloadImageTask imageTask = new DownloadImageTask(ivImage);
+        imageTask.execute(url);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
 
         setContentView(R.layout.spread_image);
 
