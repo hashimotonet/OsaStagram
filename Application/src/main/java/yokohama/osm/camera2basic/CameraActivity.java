@@ -28,6 +28,11 @@ public class CameraActivity extends AppCompatActivity {
 
     private static CameraActivity instance = null;
 
+    /**
+     * 利用者ID
+     */
+    public static String id;
+
     private static final String TAG = "Camera2BasicFragment";
 
     @Override
@@ -38,6 +43,9 @@ public class CameraActivity extends AppCompatActivity {
         Log.i(TAG,"onCreate()");
 
         instance = this;
+
+        Intent intent = getIntent();
+        CameraActivity.id = intent.getStringExtra("id");
 
         if (null == savedInstanceState) {
             getSupportFragmentManager().beginTransaction()

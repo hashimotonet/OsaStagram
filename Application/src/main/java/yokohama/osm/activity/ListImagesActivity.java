@@ -12,6 +12,9 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +28,7 @@ import java.util.List;
 
 import yokohama.osm.R;
 import yokohama.osm.adapter.GridAdapter;
+import yokohama.osm.bean.URLHolder;
 import yokohama.osm.util.BaseUtil;
 
 public class ListImagesActivity extends AppCompatActivity {
@@ -34,23 +38,25 @@ public class ListImagesActivity extends AppCompatActivity {
     private String _id;
 
     private static final String[] photos = {
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/1.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/2.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/3.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/4.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/5.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/6.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/7.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/8.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/9.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/10.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/11.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/12.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/13.jpg",
-            "http://52.68.126.14:8080/PhotoGallery/hashimoto/14.jpg"
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/1.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/2.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/3.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/4.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/5.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/6.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/7.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/8.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/9.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/10.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/11.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/12.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/13.jpg",
+            "http://52.68.110.102:8080/PhotoGallery/hashimoto/14.jpg"
             };
 
     private String photo;
+
+    private String TAG = "IMPORTANT";
 
     public ListImagesActivity() {
         super();
@@ -89,6 +95,10 @@ public class ListImagesActivity extends AppCompatActivity {
             Log.i("IMPORTANT","ListImages Constructor.");
         }
 
+        private List<String> urls;
+
+        private List<String> thumbnails;
+
         @Override
         public String doInBackground(String... params) {
 
@@ -98,7 +108,7 @@ public class ListImagesActivity extends AppCompatActivity {
             String queryString = "id=" + params[0] + "&status=" + params[1];
             //String queryString = "id=hashimoto";
             //IDと画像データを使って接続URL文字列を作成。
-            String urlStr = "http://52.68.126.14:8080/PhotoGallery/ListImages";
+            String urlStr = "http://52.68.110.102:8080/PhotoGallery/ListImages";
 
             //要求受信結果である応答を格納。
             String result = "";
@@ -205,27 +215,11 @@ public class ListImagesActivity extends AppCompatActivity {
 
             Log.i("IMPORTANT","onPostExecute()");
 
-            String success = result;
-            String message = "";
-            String[] lines = result.split("\n");
-            int length = lines.length - 1;
-            String[] url = new String[length];
-
-            List<String> array = new ArrayList<String>();
-            for (String line : lines) {
-                if (!line.startsWith("http://")) {
-                    continue;
-                }
-                array.add(line);
-            }
-
-            array = BaseUtil.sort(array);
-
-            int index = 0;
-            for (String line : array) {
-                url[index] = line;
-                //Log.d("IMPORTANT", "line = " + line);
-                index++;
+            try {
+                this.urls = getLargePhotoURL(result);
+                this.thumbnails = getThumbnailURL(result);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
             // GridViewのインスタンスを生成
@@ -235,7 +229,7 @@ public class ListImagesActivity extends AppCompatActivity {
             GridAdapter adapter = new GridAdapter(
                     getApplicationContext(),
                     R.layout.grid_items,
-                    url);
+                    thumbnails);
 
             // gridViewにadapterをセット
             gridview.setAdapter(adapter);
@@ -244,7 +238,7 @@ public class ListImagesActivity extends AppCompatActivity {
             gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    photo = url[position];
+                    photo = urls.get(position);
                     String msg = position + "番目のアイテムがクリックされました";
                     //msg += msg + " \n " + photo;
                     //Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
@@ -271,6 +265,54 @@ public class ListImagesActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
+        /**
+         * ListImagesの応答より、画像イメージのURLを取得します。
+         *
+         * @param result
+         * @return
+         */
+        private List<String> getLargePhotoURL(String result)
+                throws IOException {
+            List<String> URLs = new ArrayList<String>();
+            List<URLHolder> list = getURLHolderList(result);
+
+            for (URLHolder holder : list) {
+                URLs.add(holder.getUrl());
+            }
+
+            return URLs;
+        }
+
+        /**
+         * ListImagesの応答より、サムネイル画像のURLを取得します。
+         *
+         * @param result
+         * @return
+         */
+        private List<String> getThumbnailURL(String result)
+                throws IOException {
+            List<String> thumbnails = new ArrayList<String>();
+            List<URLHolder> list = getURLHolderList(result);
+
+            for (URLHolder holder : list) {
+                thumbnails.add(holder.getThumbnail());
+            }
+
+            Log.d(TAG, thumbnails.toString());
+
+            return thumbnails;
+        }
+
+        protected List<URLHolder> getURLHolderList(String result)
+                throws IOException {
+            result = result.substring(result.indexOf("success\n") + "success\n".length());
+            Log.d(TAG, result);
+            ObjectMapper mapper = new ObjectMapper();
+            List<URLHolder> list = mapper.readValue(result, new TypeReference<List<URLHolder>>(){});
+
+            return list;
+        }
+
         public String convertInputStreamToString(InputStream is) throws IOException {
             InputStreamReader reader = new InputStreamReader(is);
             StringBuilder builder = new StringBuilder();
@@ -283,4 +325,5 @@ public class ListImagesActivity extends AppCompatActivity {
             return builder.toString();
         }
     }
+
 }

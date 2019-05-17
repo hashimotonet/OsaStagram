@@ -1,12 +1,10 @@
 package yokohama.osm.activity;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 
@@ -32,6 +30,22 @@ public class SpreadImageActivity extends OsBaseActivity {
 
         DownloadImageTask imageTask = new DownloadImageTask(ivImage);
         imageTask.execute(url);
+
+        findViewById(R.id.backButton).setOnClickListener(new View.OnClickListener() {
+            /**
+             * Called when a view has been clicked.
+             *
+             * @param v The view that was clicked.
+             */
+            @Override
+            public void onClick(View v) {
+              callFinish();
+            }
+        });
+    }
+
+    public void callFinish() {
+        super.finish();
     }
 
     @Override

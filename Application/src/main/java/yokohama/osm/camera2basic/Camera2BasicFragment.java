@@ -926,17 +926,24 @@ public class Camera2BasicFragment extends Fragment
 
                     if ( uri != null) {
                         intent.putExtra("Uri", uri.toString());
+                    } else {
+                        Log.w(TAG,"URIがnullです！");
+                    }
+
+                    if (CameraActivity.id != null) {
+                        intent.putExtra("id", CameraActivity.id);
+                    } else {
+                        Log.w(TAG,"IDがnullです！");
                     }
 
                     try {
                         startActivity(intent);
-                        //startActivityForResult(intent,200);
                     } catch (Throwable t) {
                         t.printStackTrace();
                     }
 
-                    // fragmentを非表示に
-                    // onPause();
+                    // 当画面を非表示に
+                    CameraActivity.getInstance().finish();
 
 
                 }

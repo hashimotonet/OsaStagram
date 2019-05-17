@@ -37,6 +37,7 @@ import java.net.URLEncoder;
 import yokohama.osm.R;
 
 import static yokohama.osm.util.ImageUtil.convertImage2Base64;
+import static yokohama.osm.util.ImageUtil.convertRotatedImage2Base64;
 import static yokohama.osm.util.ImageUtil.uri2File;
 
 public class UploadActivity extends Activity
@@ -46,6 +47,11 @@ public class UploadActivity extends Activity
      * 画像イメージのURI
      */
     private Uri _uri;
+
+    /**
+     * 利用者ID
+     */
+    private String id;
 
     /**
      * デフォルトコンストラクタ
@@ -91,7 +97,10 @@ public class UploadActivity extends Activity
         // 前画面からの情報取得。
         Intent intent = getIntent();
         String extra = intent.getStringExtra("Uri");
+        this.id =     intent.getStringExtra("id");
         Log.i("IMPORTANT", "extra = " + extra);
+        Log.w("IMPORTANT", "id = " + this.id);
+
 
         _uri = Uri.parse(extra);
         File file = uri2File(_uri);
@@ -185,7 +194,9 @@ public class UploadActivity extends Activity
 
                 // 画像URIより、Base64文字列を生成する。
                 try {
-                    base64 = convertImage2Base64(getApplicationContext(),this._uri);
+//                    base64 = convertImage2Base64(getApplicationContext(),this._uri);
+                    // 画像の縦横の変換を行う。
+                    base64 = convertRotatedImage2Base64(getApplicationContext(),this._uri);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -195,13 +206,7 @@ public class UploadActivity extends Activity
 
                 // 非同期アップロード処理実行。
                 // サーバへのアップロードと、データベースへの書き込みを行う。
-                upload.execute("hashimoto", base64);
-
-                // ファイル削除
-//                File delFile = new File(this._uri.getPath());
-//                if (delFile.exists()) {
-//                    //delFile.delete();
-//                }
+                upload.execute(this.id, base64);
 
                 // 処理を抜ける。
                 break;
@@ -244,7 +249,7 @@ public class UploadActivity extends Activity
         // インテントの処理に必要な引数をセットする。
             // 現在、IDは"hashimoto"固定である。
             // 次フェーズ以降では、IDの取得はログインから取得することとする。
-        intent.putExtra("id", "hashimoto");
+        intent.putExtra("id", this.id);
         intent.putExtra("status","uploaded");
 
         // 一覧画面アクティビティの起動を行う。
@@ -332,7 +337,7 @@ public class UploadActivity extends Activity
             //可変長引数でPOSTパラメータ書式生成
             String queryString = createQueryString(params);
             //IDと画像データを使って接続URL文字列を作成。
-            String urlStr = "http://52.68.126.14:8080/PhotoGallery/Upload";
+            String urlStr = "http://52.68.110.102:8080/PhotoGallery/Upload";
 
             //要求受信結果である応答を格納。
             String result = "";

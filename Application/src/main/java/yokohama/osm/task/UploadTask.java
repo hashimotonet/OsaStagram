@@ -17,7 +17,7 @@ public class UploadTask extends AsyncTask<String, Void, String> {
     public String doInBackground(String... params) {
 
         // 使用するサーバーのURLに合わせる
-        String urlSt = "http://52.68.126.14:8080/PhotoGallery/Upload";
+        String urlSt = "http://52.68.110.102:8080/PhotoGallery/Upload";
 
         HttpURLConnection httpConn = null;
         String result = null;

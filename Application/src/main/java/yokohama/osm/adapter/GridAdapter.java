@@ -1,6 +1,8 @@
 package yokohama.osm.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Point;
 import android.util.Log;
 import android.view.Display;
@@ -13,11 +15,13 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import yokohama.osm.R;
+import yokohama.osm.SquareImageView;
 
 import static android.content.Context.WINDOW_SERVICE;
 
@@ -57,6 +61,8 @@ public class GridAdapter extends BaseAdapter {
      */
     private int ScreenHeightHalf = 0;
 
+    private String TAG = "IMPORTANT";
+
     /**
      * 唯一のコンストラクタ。
      * このコンストラクタのみにより、当アダプタは
@@ -66,7 +72,7 @@ public class GridAdapter extends BaseAdapter {
      * @param layoutId
      * @param iList
      */
-    public GridAdapter(Context context, int layoutId, String[] iList) {
+    public GridAdapter(Context context, int layoutId, List<String> iList) {
 
         // スーパークラスのデフォルトコンストラクタ呼び出し。
         super();
@@ -76,9 +82,7 @@ public class GridAdapter extends BaseAdapter {
         this.inflater = (LayoutInflater)
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.layoutId = layoutId;
-
-        // String配列の変数を、List<String>型にキャストする。
-        Collections.addAll(imageList, iList);
+        this.imageList = iList;
 
         // 画面の縦長、横幅の半分を計算
         WindowManager wm = (WindowManager)
@@ -127,7 +131,8 @@ public class GridAdapter extends BaseAdapter {
         // 引数のViewがnullであるか？
         if (convertView == null)
         { // 真の場合
-            view = inflater.inflate(layoutId, parent, false);
+            //view = inflater.inflate(layoutId, parent, false);
+            view = new SquareImageView(this.context);
         }
         else
             { // 偽の場合
@@ -135,18 +140,55 @@ public class GridAdapter extends BaseAdapter {
         }
 
         // イメージビューを取得する
-        ImageView img = view.findViewById(R.id.image_view);
+        ImageView img = (ImageView) view; //.findViewById(R.id.image_view);
+
+        Log.v(TAG, "view = " + view);
+            Log.v(TAG, "img  = " + img);
+
         // イメージビューにスケールタイプを設定する
         //img.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
         // Picassoフレームワークによる画像のロードとリサイズと描画の処理
-        Picasso.get()
-                .load(addUrl(position))
-                .resize(ScreenWidthHalf, ScreenHeightHalf)
-                .into(img);
-
+        if (true) {
+            Picasso.get()
+                    .load(addUrl(position))
+                    .resize(ScreenWidthHalf, ScreenHeightHalf)
+                    .into(img);
+        } else {
+            // 仮実装なので、後でテストする。
+            img = getSqueareBitmapOnImageView(position, img);
+        }
         // イメージビューを返却する
         return view;
+    }
+
+    /**
+     * 現在のところ実装のみ。（デバッグは未だ）
+     *
+     * @param position
+     * @param img
+     * @return
+     */
+    private ImageView getSqueareBitmapOnImageView(int position, ImageView img) {
+
+        // From URL
+        Bitmap src = null;
+        try {
+            String URL = addUrl(position);
+            InputStream in = new java.net.URL(URL).openStream();
+            src = BitmapFactory.decodeStream(in);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        int width = src.getWidth();
+        int height = src.getHeight();
+        int crop = (width - height) / 2;
+        Bitmap cropImg = Bitmap.createBitmap(src, crop, 0, height, height);
+
+        img.setImageBitmap(cropImg);
+
+        return img;
     }
 
     /**
