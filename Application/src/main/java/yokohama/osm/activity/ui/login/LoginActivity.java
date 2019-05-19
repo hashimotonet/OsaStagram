@@ -196,6 +196,10 @@ public class LoginActivity extends AppCompatActivity {
 
             Log.w(TAG, "authResult= " + authResult);
 
+            if (authResult == null) {
+                return false;
+            }
+
             if (authResult.equals("success")) {
                 return true;
             } else  {

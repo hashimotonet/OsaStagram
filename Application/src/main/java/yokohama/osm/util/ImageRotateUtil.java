@@ -71,7 +71,7 @@ public class ImageRotateUtil {
     /**
      * 画像の向きを修正する処理を行います。
      *
-     * @return 雨季の修正を行った画像ファイル
+     * @return 向きの修正を行った画像ファイル
      */
     public File rotateImage() {
 
