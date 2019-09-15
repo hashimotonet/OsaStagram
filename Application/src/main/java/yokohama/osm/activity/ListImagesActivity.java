@@ -37,23 +37,6 @@ public class ListImagesActivity extends AppCompatActivity {
 
     private String _id;
 
-    private static final String[] photos = {
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/1.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/2.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/3.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/4.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/5.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/6.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/7.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/8.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/9.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/10.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/11.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/12.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/13.jpg",
-            "http://52.68.110.102:8080/PhotoGallery/hashimoto/14.jpg"
-            };
-
     private String photo;
 
     private String TAG = "IMPORTANT";
