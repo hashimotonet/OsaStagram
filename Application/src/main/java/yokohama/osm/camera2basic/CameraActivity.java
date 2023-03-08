@@ -18,9 +18,8 @@ package yokohama.osm.camera2basic;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.ImageView;
 
 import yokohama.osm.R;
 
@@ -48,9 +47,11 @@ public class CameraActivity extends AppCompatActivity {
         CameraActivity.id = intent.getStringExtra("id");
 
         if (null == savedInstanceState) {
+            /*
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container, Camera2BasicFragment.newInstance())
                     .commit();
+            */
         }
     }
 
@@ -60,6 +61,7 @@ public class CameraActivity extends AppCompatActivity {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
         Log.i(TAG, "CameraActivity#onActivityResult() called.");
     }
 

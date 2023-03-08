@@ -20,8 +20,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import yokohama.osm.R;
-import yokohama.osm.SquareImageView;
+import yokohama.osm.util.SquareImageView;
 
 import static android.content.Context.WINDOW_SERVICE;
 
@@ -132,7 +131,7 @@ public class GridAdapter extends BaseAdapter {
         if (convertView == null)
         { // 真の場合
             //view = inflater.inflate(layoutId, parent, false);
-            view = new SquareImageView(this.context);
+            view = (View) new SquareImageView(this.context);
         }
         else
             { // 偽の場合

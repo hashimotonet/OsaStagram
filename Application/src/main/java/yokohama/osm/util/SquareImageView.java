@@ -1,9 +1,10 @@
-package yokohama.osm;
+package yokohama.osm.util;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import androidx.appcompat.widget.AppCompatImageView;
 
-public class SquareImageView extends android.support.v7.widget.AppCompatImageView {
+public class SquareImageView extends AppCompatImageView {
     public SquareImageView(Context context) {
         super(context);
         setScaleType(ScaleType.CENTER_CROP);

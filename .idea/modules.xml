@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Application/Application.iml" filepath="$PROJECT_DIR$/Application/Application.iml" />
       <module fileurl="file://$PROJECT_DIR$/OsaStagram.iml" filepath="$PROJECT_DIR$/OsaStagram.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Application/OsaStagram.Application.iml" filepath="$PROJECT_DIR$/.idea/modules/Application/OsaStagram.Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Application/OsaStagram.Application.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Application/OsaStagram.Application.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Application/OsaStagram.Application.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Application/OsaStagram.Application.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Application/OsaStagram.Application.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Application/OsaStagram.Application.unitTest.iml" />
     </modules>
   </component>
 </project>
