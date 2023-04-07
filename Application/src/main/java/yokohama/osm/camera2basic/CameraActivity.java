@@ -47,11 +47,15 @@ public class CameraActivity extends AppCompatActivity {
         CameraActivity.id = intent.getStringExtra("id");
 
         if (null == savedInstanceState) {
-            /*
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, Camera2BasicFragment.newInstance())
-                    .commit();
-            */
+            try {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.container, OldCamera2BasicFragment.class.newInstance())
+                        .commit();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            }
         }
     }
 

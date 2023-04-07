@@ -36,8 +36,18 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 import yokohama.osm.R;
+import yokohama.osm.activity.WebViewActivity;
 import yokohama.osm.activity.ui.login.LoginViewModel;
 import yokohama.osm.activity.ui.login.LoginViewModelFactory;
 import yokohama.osm.camera2basic.CameraActivity;
@@ -191,6 +201,7 @@ public class LoginActivity extends AppCompatActivity {
         protected Boolean doInBackground(Void... params) {
             // attempt authentication against a network service.
             String url = "http://52.68.110.102:8080/PhotoGallery/SignIn";
+            url = "https://192.168.11.15:8443/PhotoGallery/SignIn";
 
             CloudServerConnection connection = new CloudServerConnection(mEmail, mPassword,url);
             String authResult = connection.authenticate();
@@ -201,7 +212,9 @@ public class LoginActivity extends AppCompatActivity {
                 return false;
             }
 
-            if (authResult.equals("success")) {
+            //Toast.makeText(getApplicationContext(), authResult, Toast.LENGTH_LONG).show();
+
+            if (authResult.startsWith("success")) {
                 return true;
             } else  {
                 return false;
@@ -214,6 +227,9 @@ public class LoginActivity extends AppCompatActivity {
             //showProgress(false);
 
             if (success) {
+                //Toast.makeText(getApplicationContext(), "認証に成功しました。", Toast.LENGTH_LONG).show();
+                Log.w(TAG, "認証に成功しました。");
+
                 // カメラ画面へ遷移する
                 nextPage();
 
@@ -229,7 +245,7 @@ public class LoginActivity extends AppCompatActivity {
 
         private void nextPage() {
             String id = mEmail;
-            Intent intent = new Intent(LoginActivity.this, CameraActivity.class);
+            Intent intent = new Intent(LoginActivity.this, WebViewActivity.class);
             intent.putExtra("id", id);
             startActivity(intent);
         }
@@ -294,7 +310,7 @@ public class LoginActivity extends AppCompatActivity {
         public String authenticate() {
 
             //http接続を行うHttpURLConnectionオブジェクトを宣言。finallyで確実に解放するためにtry外で宣言。
-            HttpURLConnection con = null;
+            HttpsURLConnection con = null;
 
             //http接続のレスポンスデータとして取得するInputStreamオブジェクトを宣言。同じくtry外で宣言。
             InputStream is = null;
@@ -303,12 +319,49 @@ public class LoginActivity extends AppCompatActivity {
 
             String result = null;
 
+            SSLContext sslcontext = null;
+
+            try {
+                //証明書情報　全て空を返す
+                TrustManager[] tm = {
+                        new X509TrustManager() {
+                            public X509Certificate[] getAcceptedIssuers() {
+                                return null;
+                            }//function
+                            @Override
+                            public void checkClientTrusted(X509Certificate[] chain,
+                                                           String authType) throws CertificateException {
+                            }//function
+                            @Override
+                            public void checkServerTrusted(X509Certificate[] chain,
+                                                           String authType) throws CertificateException {
+                            }//function
+                        }//class
+                };
+                sslcontext = SSLContext.getInstance("SSL");
+                sslcontext.init(null, tm, null);
+                //ホスト名の検証ルール　何が来てもtrueを返す
+                HttpsURLConnection.setDefaultHostnameVerifier(
+                        new HostnameVerifier(){
+                            @Override
+                            public boolean verify(String hostname,
+                                                  SSLSession session) {
+                                return true;
+                            }//function
+                        }//class
+                );
+            } catch (Exception e) {
+                e.printStackTrace();
+            }//try
+
             try {
                 //URLオブジェクトを生成。
                 URL url = new URL(_url);
 
                 //URLオブジェクトからHttpURLConnectionオブジェクトを取得。
-                con = (HttpURLConnection) url.openConnection();
+                con = (HttpsURLConnection) url.openConnection();
+
+                con.setSSLSocketFactory(sslcontext.getSocketFactory());
 
                 //http接続メソッドを設定。
                 con.setRequestMethod("POST");

@@ -83,7 +83,7 @@ import androidx.fragment.app.Fragment;
 //import static yokohama.osm.util.MatrixUtil.getRotatedMatrix;
 //import static yokohama.osm.util.MatrixUtil.getTemporaryFile;
 //
-public class Camera2BasicFragment extends Fragment {
+public class OldCamera2BasicFragment extends Fragment {
 ////public class Camera2BasicFragment extends FragmentActivity
 //        implements View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback {
 //

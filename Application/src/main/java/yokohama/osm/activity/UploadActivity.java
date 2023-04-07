@@ -338,7 +338,7 @@ public class UploadActivity extends Activity
             String queryString = createQueryString(params);
             //IDと画像データを使って接続URL文字列を作成。
             String urlStr = "http://52.68.110.102:8080/PhotoGallery/Upload";
-
+            urlStr = "https://192.168.11.10:8080/PhotoGallery/Upload";
             //要求受信結果である応答を格納。
             String result = "";
 

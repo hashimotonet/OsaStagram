@@ -5,6 +5,7 @@
     android:background="#ffffff"
     android:gravity="center"
     android:padding="3dp"
+    android:theme="@style/MaterialTheme"
     >
 
     <yokohama.osm.util.SquareImageView

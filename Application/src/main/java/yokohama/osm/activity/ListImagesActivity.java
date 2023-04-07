@@ -24,8 +24,17 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 import yokohama.osm.R;
 import yokohama.osm.adapter.GridAdapter;
@@ -70,13 +79,17 @@ public class ListImagesActivity extends AppCompatActivity {
     /**
      * インターネット接続インナークラス
      */
-    private class ListImages extends AsyncTask<String, Void, String> {
+    public class ListImages extends AsyncTask<String, Void, String> {
 
         /**
          * コンストラクタ
          */
-        ListImages() {
+        public ListImages() {
             Log.i("IMPORTANT","ListImages Constructor.");
+        }
+
+        public ListImages(String str1, Void v, String str2) {
+
         }
 
         private List<String> urls;
@@ -89,26 +102,63 @@ public class ListImagesActivity extends AppCompatActivity {
             Log.i("IMPORTANT","ListImages#doInBackground()");
 
             //可変長引数でPOSTパラメータ書式生成
-            String queryString = "id=" + params[0] + "&status=" + params[1];
+            //String queryString = "id=" + params[0] + "&status=" + params[1];
+            String  queryString = "id=hashimoto.osamu%40gmail.com&status=1";
             //String queryString = "id=hashimoto";
             //IDと画像データを使って接続URL文字列を作成。
             String urlStr = "http://52.68.110.102:8080/PhotoGallery/ListImages";
+            urlStr = "https://192.168.11.15:8443/PhotoGallery/ListImages";
 
             //要求受信結果である応答を格納。
             String result = "";
 
             //http接続を行うHttpURLConnectionオブジェクトを宣言。finallyで確実に解放するためにtry外で宣言。
-            HttpURLConnection con = null;
+            HttpsURLConnection con = null;
 
             //http接続のレスポンスデータとして取得するInputStreamオブジェクトを宣言。同じくtry外で宣言。
             InputStream is = null;
+
+            SSLContext sslcontext = null;
+
+            try {
+                //証明書情報　全て空を返す
+                TrustManager[] tm = {
+                        new X509TrustManager() {
+                            public X509Certificate[] getAcceptedIssuers() {
+                                return null;
+                            }//function
+                            @Override
+                            public void checkClientTrusted(X509Certificate[] chain,
+                                                           String authType) throws CertificateException {
+                            }//function
+                            @Override
+                            public void checkServerTrusted(X509Certificate[] chain,
+                                                           String authType) throws CertificateException {
+                            }//function
+                        }//class
+                };
+                sslcontext = SSLContext.getInstance("SSL");
+                sslcontext.init(null, tm, null);
+                //ホスト名の検証ルール　何が来てもtrueを返す
+                HttpsURLConnection.setDefaultHostnameVerifier(
+                        new HostnameVerifier(){
+                            @Override
+                            public boolean verify(String hostname,
+                                                  SSLSession session) {
+                                return true;
+                            }//function
+                        }//class
+                );
+            } catch (Exception e) {
+                e.printStackTrace();
+            }//try
 
             try {
                 //URLオブジェクトを生成。
                 URL url = new URL(urlStr);
 
                 //URLオブジェクトからHttpURLConnectionオブジェクトを取得。
-                con = (HttpURLConnection) url.openConnection();
+                con = (HttpsURLConnection) url.openConnection();
 
                 //http接続メソッドを設定。
                 con.setRequestMethod("POST");
@@ -224,8 +274,8 @@ public class ListImagesActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     photo = urls.get(position);
                     String msg = position + "番目のアイテムがクリックされました";
-                    //msg += msg + " \n " + photo;
-                    //Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                    msg += msg + " \n " + photo;
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                     //
                     // インテント、URLを引数に、一画面イメージの描画アクティビティを表示する。
                     //
@@ -235,12 +285,12 @@ public class ListImagesActivity extends AppCompatActivity {
             });
 //            // 一覧画面取得完了を出力。
 //            if (success.startsWith("success")) {
-//                message = "一覧取得が完了しました！";
+              String  message = "一覧取得が完了しました！";
 //            } else {
 //                message = "一覧取得が失敗しました。";
 //            }
 //
-//            Toast.makeText(getBaseContext(), message, Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), message, Toast.LENGTH_LONG).show();
 
         }
 
@@ -289,10 +339,12 @@ public class ListImagesActivity extends AppCompatActivity {
 
         protected List<URLHolder> getURLHolderList(String result)
                 throws IOException {
-            result = result.substring(result.indexOf("success\n") + "success\n".length());
+            //result = result.substring("success".length());
             Log.d(TAG, result);
             ObjectMapper mapper = new ObjectMapper();
             List<URLHolder> list = mapper.readValue(result, new TypeReference<List<URLHolder>>(){});
+
+            Log.d(TAG, list.toString());
 
             return list;
         }
@@ -302,10 +354,10 @@ public class ListImagesActivity extends AppCompatActivity {
             StringBuilder builder = new StringBuilder();
             char[] buf = new char[1024];
             int numRead;
-            while (0 <= (numRead = reader.read(buf))) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     while (0 <= (numRead = reader.read(buf))) {
                 builder.append(buf, 0, numRead);
-                //Log.d("IMPORTANT", "builder.toString() = " + builder.toString());
             }
+            Log.d("IMPORTANT", "builder.toString() = " + builder.toString());
             return builder.toString();
         }
     }

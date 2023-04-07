@@ -1,5 +1,7 @@
 package yokohama.osm.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 
 public final class URLHolder implements Serializable {
@@ -23,6 +25,10 @@ public final class URLHolder implements Serializable {
 
     private String thumbnail;
 
+    public String getAlt() { return alt; }
 
+    public void setAlt(String alt) { this.alt = alt; }
 
+    @JsonIgnore
+    private String alt;
 }

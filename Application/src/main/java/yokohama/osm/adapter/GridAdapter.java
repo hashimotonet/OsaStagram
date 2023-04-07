@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import yokohama.osm.util.SquareImageView;
-
 import static android.content.Context.WINDOW_SERVICE;
+
+import yokohama.osm.util.SquareImageView;
 
 /**
  * グリッド表示をつかさどるアダプタクラス。
@@ -142,7 +142,7 @@ public class GridAdapter extends BaseAdapter {
         ImageView img = (ImageView) view; //.findViewById(R.id.image_view);
 
         Log.v(TAG, "view = " + view);
-            Log.v(TAG, "img  = " + img);
+        Log.v(TAG, "img  = " + img);
 
         // イメージビューにスケールタイプを設定する
         //img.setScaleType(ImageView.ScaleType.FIT_CENTER);
